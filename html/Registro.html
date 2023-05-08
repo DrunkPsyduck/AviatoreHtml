@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="../Estilos/EstilosLogReg.css" rel="stylesheet">
+    <link href="../Estilos/Animacion.css" rel="stylesheet">
+    <script src="../Javascript/ValidarRegistro.js"></script>
+    <script src="../Javascript/fechas.js"></script>
+    <!-- IMPORT BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!--Fin import bootstrap -->
+    <style>
+        #mostrar {
+            color: #8a0e0e;
+        }
+
+        #id {
+            justify-content: center;
+            align-self: center;
+        }
+    </style>
+    <title>Registro</title>
+</head>
+
+<body class="body">
+
+    <h1>AVIATORE</h1>
+
+    <div id="contenedor">
+
+        <!--
+            <form id="log" method="post">
+                 <h3 class="display-4">Formulario de registro</h3>
+                <label> Nombre de usuario *</label><br>
+                <input class="form-control" type="text" id="nombreUsuario"><br>
+
+                <label> Nombre *</label><br>
+                <input class="form-control" type="text" id="nombre"><br>
+                <label> Apellido * </label><br>
+                <input class="form-control" type="text" id="apellido"><br>
+
+                <label> Telefono </label><br>
+                <input class="form-control" type="tel" id="telefono"><br>
+                <label> Email * </label><br>
+                <input class="form-control" type="email" id="email"><br>
+
+                <label>
+                    Contrasena *
+                </label><br>
+                <input class="form-control" type="password" id="pass"><br>
+
+                <label>
+                    Repita la contrasena *
+                </label><br>
+                <input class="form-control" type="password" id="passRepetir"><br>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="condiciones" required>
+                    He leido y acepto las <a href="">condiciones de uso</a>
+                </div>
+
+                <input id="boton" class="btn btn-success" type="button" value="Acceder" onclick="validar()">
+                <p>Los campos con * son obligatorios</p>
+            </form>-->
+
+
+<form class="form-horizontal" action='' method="POST">
+    <fieldset>
+        <div id="legend">
+            <legend class="">Register</legend>
+        </div>
+        <div class="control-group">
+            <!-- Username -->
+            <label class="control-label" for="username">Nombre de usuario*</label>
+            <div class="controls">
+                <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="" class="input-xlarge">
+                <p class="help-block">Introduce el nombre de usuario</p>
+            </div>
+        </div>
+
+         <div class="control-group">
+             <!-- nombre -->
+             <label class="control-label" for="username">Nombre*</label>
+             <div class="controls">
+                 <input type="text" id="nombre" name="nombre" placeholder="" class="input-xlarge">
+                 <p class="help-block">Introduce tu nombre</p>
+             </div>
+         </div>
+
+          <div class="control-group">
+              <!-- apellido -->
+              <label class="control-label" for="username">Apellidos*</label>
+              <div class="controls">
+                  <input type="text" id="apellido" name="apellido" placeholder="" class="input-xlarge">
+                  <p class="help-block">Introduce tu apellido</p>
+              </div>
+          </div>
+
+        <div class="control-group">
+            <!-- E-mail -->
+            <label class="control-label" for="email">E-mail*</label>
+            <div class="controls">
+                <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+                <p class="help-block">Introduce tu E-mail</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- telefonop -->
+            <label class="control-label" for="email">Telefonp</label>
+            <div class="controls">
+                <input type="text" id="tel" name="telefono" placeholder="" class="input-xlarge">
+                <p class="help-block">Introduce tu telefono</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password-->
+            <label class="control-label" for="pass">Contraseña*</label>
+            <div class="controls">
+                <input type="password" id="pass" name="password" placeholder="" class="input-xlarge">
+                <p class="help-block">Introduce tu contraseña</p>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password -->
+            <label class="control-label" for="passRepetir">Confirma tu contraseña*</label>
+            <div class="controls">
+                <input type="password" id="passRepetir" name="password_confirm" placeholder=""
+                    class="input-xlarge">
+                <p class="help-block">Introduce la misma contraseña</p>
+            </div>
+        </div>
+
+         <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="condiciones" required>
+             He leido y acepto las <a href="">condiciones de uso</a>
+         </div>
+
+      
+        <div class="control-group">
+            <!-- Button -->
+            <div class="controls">
+                <input id="boton" class="btn btn-success" type="button" value="Acceder" onclick="validar()">
+                <p>Los campos con * son obligatorios</p>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+    </div>
+    <div id="mostrar">
+
+    </div>
+
+    <img class="avion" src="../img/aviatore.png" style="width: 5%; height: auto;" alt="Logo Aviatore"><br><br>
+
+
+    <footer>
+        <p>Aviatore, Madrid,
+            <script>
+                devuelveAnio()
+            </script> , Derechos Limitados</p>
+        <a href="../Index.html">Volver a Aviatore</a>
+
+    </footer>
+</body>
+
+</html>

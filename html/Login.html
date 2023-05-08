@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="../Estilos/EstilosLogReg.css" rel="stylesheet">
+
+    <link href="../Estilos/Animacion.css" rel="stylesheet">
+    <script src="../Javascript/fechas.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery.ui.touch-punch.min.js">
+    </script>
+
+    <script>
+        var contador = 0;
+        $(function () {
+            $("img").draggable();
+            $(".droppable").droppable({
+                accept: '#contenedorPeq',
+                drop: function (event, ui) {
+                    $(this).append(ui.draggable);
+                    $(p).html(contador);
+
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            // do something…
+            var msg =
+                " 🍪 Utilizamos cookies propias y de terceros. Al continuar navegando aceptas la politica de cookies. Puedes ver las condiciones" +
+                " <a href='./html/cookies.html' target='blank'> aqui </a>";
+            $('#cookies').append(msg);
+
+            document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+
+        });
+
+        function setCookie() {
+            var recordar = document.getElementById("dropdownCheck2").checked;
+
+            if (recordar) {
+                var nombre = document.getElementById("nombre").value;
+                document.cookie = "name=" + nombre + ";";
+
+            }
+
+        }
+    </script>
+
+    <title>Login</title>
+
+</head>
+
+<body class="body">
+
+    <div>
+        <img src="../img/aviatore.png" style="width:10%; height: auto;">
+
+        <h1>AVIATORE</h1>
+
+        <!--      <div id="contenedor">
+            <form id="log" method="post">
+
+                <h5 class="">Introduzca su usuario y contraseña</h5>
+
+                <label> Usuario</label><br>
+                <input class="form-control" type="text" id="nombre" name="Usuario"><br>
+                <label>
+                    Contraseña
+                </label><br>
+                <input class="form-control" type="password" name="pass"><br>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                    <label class="form-check-label" for="dropdownCheck2">
+                        Recuerdame
+                    </label>
+                </div>
+
+                <input id="boton" class="btn btn-primary" type="BUTTON" value="Acceder" style="margin: 2%"
+                    onclick=setCookie()>
+            </form>
+        </div>-->
+
+
+        <div id="login">
+            <h3 class="text-center text-white pt-5">Inicie sesión</h3>
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
+                            <form id="login-form" class="form" action="" method="post">
+                                <div class="form-group">
+                                    <label for="username" >Usuario:</label><br>
+                                    <input type="text" name="Usuario" id="nombre" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="">Contraseña:</label><br>
+                                    <input type="password" name="pass" id="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="remember-me" ><span>Recordarme</span> <span><input
+                                                id="dropdownCheck2" name="remember-me" type="checkbox"
+                                                class=""></span></label><br>
+                                    <input id="submit" class="btn btn-primary" type="BUTTON" value="Acceder"
+                                        style="margin: 2%" onclick=setCookie()>
+                                </div>
+                                <div id="register-link" class="text-right">
+                                    <p>¿Aún sin cuenta? 
+                                    <a href="../html/Registro.html" class="">Registrate aquí</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="cookies" class="fixed-bottom cookies alert alert-warning alert-dismissible fade show" role="alert">
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <img class="avion" src="../img/aviatore.png" style="width: 5%; height: auto;" alt="Logo Aviatore"><br><br>
+
+
+    </div>
+    <footer>
+        <p>Aviatore, Madrid,
+            <script>
+                devuelveAnio()
+            </script> , Derechos Limitados</p>
+        <p>
+            <a href="../Index.html">Volver a aviatore</a>
+
+
+    </footer>
+</body>
+
+</html>

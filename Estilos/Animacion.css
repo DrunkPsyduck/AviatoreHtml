@@ -1,0 +1,20 @@
+.avion {
+    position: absolute;
+    animation: animacion 4s infinite linear;
+    width: auto;
+}
+
+@keyframes animacion {
+    0% {
+        width: 5%;
+        left: 0%;
+    }
+    /*50% {
+        width: 10%;
+        left: 37%;
+    }*/
+    100% {
+        width: 5%;
+        left: 100%;
+    }
+}

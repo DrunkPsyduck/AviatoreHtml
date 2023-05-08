@@ -1,0 +1,56 @@
+.body {
+    background-color: #4388CC;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: "Audiowide";
+    color: #fff;
+    text-decoration: underline black;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#contenedor {
+  
+    padding-left: 40%;
+}
+
+#log {
+    border: 1px solid black;
+    border-radius: 5%;
+    padding: 8%;
+    margin: 5%;
+}
+
+input {
+    align-self: flex-end;
+}
+
+.cookies {
+    opacity: 0.8;
+    color: black;
+    background-color: #4388CC;
+}
+
+#boton:hover {
+    background-color: #4388CC;
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+footer {
+    background-color: #2699f2;
+    padding: 50px 0px 50px 0px;
+    text-align: center;
+    font-weight: bold;
+}

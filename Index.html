@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="Estilos/Style.css" />
+    <link rel="stylesheet" type="text/css" href="Estilos/Animacion.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet" />
+    <script src="../Javascript/fechas.js"></script>
+
+
+    <!-- bootstrp imports-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <!-- fin import bootstrap-->
+    <title>Aviatore</title>
+
+    <script src="Javascript/fechas.js"></script>
+    <script>
+        $(document).ready(function () {
+            var msg =
+                " 🍪 Utilizamos cookies propias y de terceros. Al continuar navegando aceptas la politica de cookies. Puedes ver las condiciones" +
+                " <a href='./html/cookies.html' target='blank'> aqui </a>";
+            $('#cookies').append(msg);
+
+            document.cookie = "username=foo; expires=Thu, 18 Dec 2050 12:00:00 UTC; path=/";
+
+
+        });
+    </script>
+
+
+
+    <style>
+        .nav {
+            margin: 0% 1%;
+        }
+
+        .carrousel {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+            text-shadow: black;
+        }
+
+        .carousel-item {
+            height: 100vh;
+            min-height: 350px;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .cookies {
+            opacity: 0.8;
+            color: black;
+            background-color: #4388CC;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="panel">
+        <video loop autoplay muted class="video" poster="img/poster.png">
+            <source src="video/vuelo.webm" type="video/webm" />
+            <source src="video/vuelo.mp4" type="video/mp4" />
+        </video>
+
+        <div class="textoVideo subtitulo">
+            <h1 class="encabezado" style="padding-top: 15%;">Aviatore</h1>
+            <p>llevandote cada día más lejos</p>
+        </div>
+    </div>
+
+    <div id="cookies" class="fixed-bottom cookies alert alert-warning alert-dismissible fade show" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="#">Aviatore</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#DestinosPopulares">Destinos populares <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#MasAviones">Mas que aviones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Servicios">Nuestros servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Ubicacion" tabindex="-1">Donde estamos</a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav nav float-right ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-info" href="html/Login.html" tabindex="-1">iniciar sesion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-info" href="html/Registro.html" tabindex="-1">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        
+
+
+
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active"
+                style="background-image: url(https://farm9.staticflickr.com/8055/29377856905_a2085fb069_b.jpg)">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Madrid</h2>
+                    <p class="lead">La capital de España</p>
+                </div>-->
+            </div>
+            
+            <div class="carousel-item"
+                style="background-image: url('https://live.staticflickr.com/3061/2844615801_dd34e536dc_b.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Barcelona</h2>
+                    <p class="lead">Freddie Mercury le canto una vez.</p>
+                </div>
+            </div>
+           
+            <div class="carousel-item"
+                style="background-image: url('https://live.staticflickr.com/2491/3745038579_00b49ac3e2_b.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Roma</h2>
+                    <p class="lead">Ahora con más coronavirus</p>
+                </div>
+            </div>
+
+            <div class="carousel-item"
+                style="background-image: url('https://live.staticflickr.com/2840/9537264686_35cf06b173_b.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Tokio</h2>
+                    <p class="lead">Dias sin ver a Godzilla: 668</p>
+                </div>
+            </div>
+
+            <div class="carousel-item"
+                style="background-image: url('https://live.staticflickr.com/4014/4687879125_4f3d4f131a_b.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Nueva York</h2>
+                    <p class="lead">Ahora con más músicales!</p>
+                </div>
+            </div>
+
+
+
+            <div class="carousel-item"
+                style="background-image: url('https://live.staticflickr.com/224/512249253_402cefde15_b.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Sydney</h2>
+                    <p class="lead">Donde todo puede matarte</p>
+                </div>
+            </div>
+
+            <div class="carousel-item"
+                style="background-image: url('https://live.staticflickr.com/3040/2910259650_fdb4a91ba5_b.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Londres</h2>
+                    <p class="lead">Incluye el Brexit</p>
+                </div>
+            </div>
+
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+    <div class="grid-itemImpar">
+        <h2 class="display-4" id="MasAviones">Más que aviones</h2>
+        <p class="text-center">
+            Aviatore nace de la sensacion de viajar por el mundo. Nuestra misión es ofrecer más opciones de vuelo a
+            los clientes.
+        </p>
+        <p>
+            Para ello buscamos vuelos para los destinos turisticos. Además de ofrecer un servicio PREMIUM con
+            nuestros clientes buscando lo mejor.
+        </p>
+        <p>
+            <span class="span">AVIATORE</span> es más que vuelos, es la manera de viajar.
+        </p>
+        <br />
+
+        <img class="avion" src="img/aviatore.png" alt="Logo Aviatore" style="width: 5%; height: auto;" />
+        <br /><br /><br /><br />
+    </div>
+    <div class="grid-itemPar" id='Servicios'>
+        <h2 class="display-4">Nuestros servicios</h2>
+        <div class="float-right" width="40%" style="padding-top: 10%">
+            <p>
+                Además de ofrecer viajes, oferecemos el máximo exponente en lujo: Jets privados
+            </p>
+            <p>
+                Con el alquiler de nuestros jets privados podrás viajar a cualquier lugar del mundo con todos los
+                lujos.
+                <br />
+                Nuestra tripulacón te hará sentir como en casa.
+            </p>
+            <p>Disfruta de tus viajes con AVIATORE</p>
+        </div>
+
+        <img style="display: block;" src="https://farm7.staticflickr.com/6072/6043650095_a6edf57fab_b.jpg"
+            alt="Abandoned Plane" class="rounded" width="40%">
+
+    </div>
+    <div class="grid-itemImpar" id="Ubicacion">
+
+        <h2 class="display-4">Donde Estamos</h2>
+        <div class="acordion">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.9753239968845!2d-3.630272588247358!3d40.38723950580005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x73b158a02dfc6ab2!2sI.E.S.%20Palomeras-Vallecas!5e0!3m2!1ses!2ses!4v1582791661243!5m2!1ses!2ses"
+                width="90%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        <h5 class="display-5">Si quieres saber tu ubicación hazlo aquí</h5>
+        <button onclick="getLocation()" class="btn btn-info">Comprueba tu posición</button>
+        <div id="demo"></div>
+
+        <script>
+            var x = document.getElementById("demo");
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) {
+                x.innerHTML = "Tu latitud es: " + position.coords.latitude +
+                    "<br>Tu longitud es: " + position.coords.longitude;
+            }
+        </script>
+
+    </div>
+
+    <footer>
+        <a href="#">FAQ </a>
+        <a href="#">Legal </a>
+        <a href="#">Sobre </a>
+        <a href="#">Bases legales </a>
+        <a href="#">Contacto </a>
+        <a href="html/Licencias.html" target="_blank">Licencias</a>
+
+        <a class="btn btn-success" href="#">
+            volver arriba</a>
+
+
+        <p>Aviatore, Madrid,
+            <script>
+                devuelveAnio()
+            </script> , Derechos Limitados</p>
+        </p>
+
+
+    </footer>
+
+</body>
+
+</html>
